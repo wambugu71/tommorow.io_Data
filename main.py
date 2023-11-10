@@ -26,8 +26,6 @@ firebase = pyrebase.initialize_app(config)
 firebase = pyrebase.initialize_app(config)
 storage = firebase.storage()
 
-path_on_cloud = "wambugu.weather_data.csv"
-
 path_local =file_name
 
 
