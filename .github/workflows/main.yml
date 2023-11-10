@@ -1,7 +1,7 @@
 on:
   workflow_dispatch: # Manual trigger to run a workflow
   schedule:
-    - cron:  '0 * * * *' # Every hour
+    - cron:  '0 * * * *'  # Every hour
 name: Daily Figures Update
 jobs:
   create-and-push-figures:
@@ -20,11 +20,3 @@ jobs:
     - name: Execute Python scripts
       run: |
         python main.py
-    - name: Commit figures
-      run: |
-        bash .github/workflows/commit.sh
-    - name: Push new figures
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
