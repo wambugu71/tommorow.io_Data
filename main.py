@@ -16,7 +16,7 @@ config = {
   "authDomain": "weatherdata-51a1f.firebaseapp.com",
   "databaseURL": "https://weatherdata-51a1f-default-rtdb.firebaseio.com",
   "storageBucket": "weatherdata-51a1f.appspot.com",
-  "serviceAccount": "weatherdata-51a1f-firebase-adminsdk-n0c0k-6b36a3a194.json"
+  "serviceAccount": "weather.json"
 }
 
 
