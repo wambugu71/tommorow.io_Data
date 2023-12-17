@@ -19,3 +19,7 @@ jobs:
     - name: Execute Python scripts
       run: |
         python main.py
+    - name: Execute  gcp script
+      run: |
+       python maingcp.py
+        
