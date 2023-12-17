@@ -1,6 +1,3 @@
-import  os
-from google.cloud import  storage
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "dsail-misc-new.json"
 import pyrebase
 import  requests
 import  json
@@ -54,22 +51,3 @@ storage.child(path2).put(path2)
 #storage.child(path_on_cloud).download("<file_downloaded>")
 
 #GCP
-storage_client = storage.Client()
-
-bucket_name = "tomorrow_io"
-#3bucket = storage_client.create_bucket(bucket_name)\
-my_bucket   = list(storage_client.list_buckets())
-print(my_bucket)
-bucket_storage = storage_client.get_bucket("tomorrow_io")
-print(bucket_storage)
-
-# upload  file to bucket
-def  upload_file(file):
-    bucket = storage_client.get_bucket("tomorrow_io")
-    blob = bucket.blob(file)
-    blob.upload_from_filename(file)
-    print("File  uploded  succesfully")
-
-upload_file(path2)
-
-
