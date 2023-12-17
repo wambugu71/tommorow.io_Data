@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '0 * * * *' #'0 12 * * *' run 12 noon# # Run the  script  every hour
+    - cron: '0 12 * * *'#'0 * * * *' # run 12 noon# # Run the  script  every hour
 name: Hourly weather update
 jobs:
   create-and-push-figures:
