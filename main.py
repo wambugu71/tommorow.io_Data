@@ -6,7 +6,7 @@ from datetime  import  datetime
 current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")  # Format: YYYY-MM-DD_HH-MM-SS
 file_name = f"Data_{formatted_datetime}.json"
-url = "https://api.tomorrow.io/v4/weather/forecast?location=-0.416667,36.950000&apikey=Uuww83qb9dv3Ehj9L3ugaO1PF4DD3D4Z"
+url = "https://api.tomorrow.io/v4/weather/forecast?location=-0.416667,36.950000&apikey=<Tommorow.io api key>"
 response = requests.get(url)
 file   =  open(file_name, "wb")
 file.write(response.content)
@@ -25,11 +25,11 @@ data.to_csv(path2)
 
 print(f"Data has been written to {file_name}")
 config = {
-  "apiKey": "AIzaSyDmVHSWHzIJGL-tMzknE90TNGjTWfm9bcs",
-  "authDomain": "weatherdata-51a1f.firebaseapp.com",
-  "databaseURL": "https://weatherdata-51a1f-default-rtdb.firebaseio.com",
-  "storageBucket": "weatherdata-51a1f.appspot.com",
-  "serviceAccount": "weather.json"
+  "apiKey": "",
+  "authDomain": "",
+  "databaseURL": "",
+  "storageBucket": "",
+  "serviceAccount": "<firebase_credentials>.json"
 }
 
 
