@@ -1,6 +1,6 @@
 import  os
 from google.cloud import  storage
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "dsail-misc-new.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "dsail-misc-new.json"#credentials  from google cloud  platform.
 import  requests
 import  json
 import  pandas as  pd
@@ -8,7 +8,7 @@ from datetime  import  datetime
 current_datetime = datetime.now()
 formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")  # Format: YYYY-MM-DD_HH-MM-SS
 file_name = f"Data_{formatted_datetime}.json"
-url = "https://api.tomorrow.io/v4/weather/forecast?location=-0.416667,36.950000&apikey=Uuww83qb9dv3Ehj9L3ugaO1PF4DD3D4Z"
+url = "https://api.tomorrow.io/v4/weather/forecast?location=-0.416667,36.950000&apikey=<tommorow.io api-key>"
 response = requests.get(url)
 file   =  open(file_name, "wb")
 file.write(response.content)
